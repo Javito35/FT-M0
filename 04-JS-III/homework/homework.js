@@ -157,7 +157,7 @@ function cuentoElementos(arreglo){
 }
 
 
-   diaDeLaSemana(numeroDeDia) 
+  function diaDeLaSemana(numeroDeDia) {
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
   //Realiza una función que dado el número del día de la semana, retorne: "Es fin de semana"
   //si el día corresponde a Sábado o Domingo y "Es dia Laboral" en caso contrario. 
@@ -169,14 +169,11 @@ function cuentoElementos(arreglo){
 }
 
 
-
-
-
 function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  if (n.tostring()[0] === "9"){
+  if(n.toString()[0] === "9"){
     return true
   }
   return false
@@ -189,7 +186,7 @@ function todosIguales(arreglo) {
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
   var cont = 0
-  for( var i = 1; i<arreglo.length; i++){
+  for (var i = 1; i<arreglo.length; i++){
     if(arreglo[i-1] !== arreglo [i]){
       cont ++
     }
@@ -207,14 +204,15 @@ function mesesDelAño(array) {
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
   var arr = []
-  for(var i = 0; i > array.length; i++){
+  for (var i = 0; i < array.length; i++) {
     if(array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre"){
-      arr.push(array [i])
+      arr.push(array[i])
     }
+  }
     if(arr.length === 3) return arr;
     return "No se encontraron los meses pedidos"
   }
-}
+
 
 
 function mayorACien(array) {
@@ -248,7 +246,8 @@ function breakStatement(numero) {
       arr.push (numero)
     }
   }
-  if ( I < 10){
+  
+  if ( i < 10){
     return "Se interrumpió la ejecución"
   }
   return arr
