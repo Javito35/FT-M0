@@ -28,13 +28,14 @@ function conection(status) {
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
-   if(status === 1) {
-     return "On line"
+  
+   if(status === 1){
+     return "Online"
    }
    if(status === 2){
      return "Away"
    }
-   return "Offline"
+   return "Offline"  
   }
 
 
@@ -46,7 +47,7 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
-if(idiona === "aleman") return "Guten Tag!"
+if(idioma === "aleman") return "Guten Tag!"
 if(idioma === "mandarin") return "Ni Hao!"
 if(idioma === "ingles") return "Hello!"
 return "Hola!"
@@ -76,15 +77,15 @@ function colors(color) {
   //Usar el statement Switch.
 switch (color) {
   case "blue":
-    return "Thisi is blue"
+    return "This is blue"
     case "red":
       return "This is red"
       case "green":
-        return "Thisi is green"
+        return "This is green"
         case "orange":
-          return "This is Orange"
+          return "This is orange"
   default:
-    return "Color not Found"
+    return "Color not found"
 }
 }
 
@@ -94,9 +95,9 @@ function esDiezOCinco(numero) {
   // De lo contrario, devuelve "false"
   // Tu código:
 if(numero === 10 || numero === 5){
-  return "true"
+  return true
 }
-return "false"
+return false
 }
 
 
@@ -119,11 +120,12 @@ function esEntero(numero) {
   // De lo cont rario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  var int = Math.floor (numero)
+  var int = Math.floor(numero)
   if(int === numero){
-    return "true"
+    return true
+  }else{
+    return false
   }
-  return "false"
 }
 
 
@@ -132,13 +134,13 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if(numero % 3 === 0 && numero % 5 ===0){
+  if(numero % 3 === 0 && numero % 5 === 0){
     return "fizzbuzz"
   }
   if(numero % 3 === 0){
     return "fizz"
   }
-  if(numero % 5 ===0){
+  if(numero % 5 === 0){
     return "buzz"
   }
   return numero
@@ -177,12 +179,12 @@ function esPrimo(numero) {
   if(numero === 0 || numero === 1){
     return false
   }
-  for(var i = 2; i < numero; i++){
-    if(numero % i === 0){
-      return false
+    for( var i = 2; i < numero; i++){
+      if(numero % i === 0){
+        return false
+      }
+      return true
     }
-    return true
-  } 
 }
 
 function esVerdadero(valor){
@@ -214,10 +216,10 @@ function doWhile(numero) {
   do{
     numero = numero + 5
     contador ++
-    while (contador < 8){
-      return numero
-    }
   }
+    while (contador < 8)
+      return numero
+    
 }
 
 
