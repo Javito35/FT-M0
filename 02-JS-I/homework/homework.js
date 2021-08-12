@@ -31,13 +31,15 @@ const nuevoModulo = 21 % 5 === 1;
 function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
-}return str;
+return String;
+}
 
 function suma(x, y) {
   // "x" e "y" son números
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
-}return x + y
+  return x + y
+}
 
 
 function resta(x, y) {
@@ -173,11 +175,11 @@ function esPositivo(numero) {
   if(numero === 0){
     return false
   }
-  else if(numero > 0)
+  else if(numero > 0){
   return "Es positivo"
 }
 else{
-  return "Es nogativo"
+  return "Es negativo"
 }
 }
 
@@ -231,7 +233,7 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-retur euro * 1.20  
+return euro * 1.20  
 }
 
 
@@ -246,6 +248,7 @@ function esVocal(letra){
   if(letra === "a" || letra === "e"|| letra === "i" || letra === "o" || letra === "u"){
     return "Es Vocal"
   }
+}
 
 
 
